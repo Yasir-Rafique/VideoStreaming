@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body class="modal-open">
+	<div id="app">
+		<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+			<div class="container">
+				<a class="navbar-brand" href="https://laravelcode.com">Laravelcode Demo</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto"></ul>
+					<ul class="navbar-nav ml-auto"></ul>
+				</div>
+			</div>
+		</nav>
+		<main class="py-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 top-bar-ad">
+						<ins class="adsbygoogle" data-ad-client="ca-pub-1613075416928704" data-ad-format="auto" data-ad-slot="4669706471" style="display: block;"></ins>
+					</div>
+				</div><br>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card card-default">
+							<div class="card-header">
+								<div class="row">
+									<div class="col-md-10">
+										<strong>Add User</strong>
+									</div>
+								</div>
+							</div>
+							<div class="card-body">
+								<form action="" id="addUser" method="post" name="addUser">
+									<div class="form-group">
+										<label class="col-md-12 col-form-label" for="first_name">First Name</label>
+										<div class="col-md-12">
+											<input autofocus="autofocus" class="form-control" id="first_name" name="first_name" required="required" type="text" value="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-12 col-form-label" for="last_name">Last Name</label>
+										<div class="col-md-12">
+											<input autofocus="autofocus" class="form-control" id="last_name" name="last_name" required="required" type="text" value="">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-md-12 col-md-offset-3">
+											<button class="btn btn-primary btn-block" id="submitUser" type="button">Submit</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="card card-default">
+							<div class="card-header">
+								<div class="row">
+									<div class="col-md-10">
+										<strong>All Users Listing</strong>
+									</div>
+								</div>
+							</div>
+							<div class="card-body">
+								<table class="table table-bordered">
+									<tbody>
+										<tr>
+											<th>First Name</th>
+											<th>Last Name</th>
+											<th class="text-center" width="180">Action</th>
+										</tr>
+									</tbody>
+									<tbody id="tbody">
+										<tr>
+											<td>abdul</td>
+											<td>jaman</td>
+											<td>
+												<a class="btn btn-outline-success updateData" data-id="45111111111111111111111111111111111111111111111111111111111111111111111111111111111111" data-target="#update-modal" data-toggle="modal">Update</a> <a class="btn btn-outline-danger removeData" data-id="45111111111111111111111111111111111111111111111111111111111111111111111111111111111111" data-target="#remove-modal" data-toggle="modal">Delete</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<form action="" class="users-remove-record-model" method="post">
+				<div aria-hidden="true" aria-labelledby="custom-width-modalLabel" class="modal fade" id="remove-modal" role="dialog" style="display: none;" tabindex="-1">
+					<div class="modal-dialog" style="width: 55%;">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title" id="custom-width-modalLabel">Delete Record</h4><button aria-hidden="true" class="close remove-data-from-delete-form" data-dismiss="modal" type="button">×</button>
+							</div>
+							<div class="modal-body">
+								<h4>You Want You Sure Delete This Record?</h4>
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-default waves-effect remove-data-from-delete-form" data-dismiss="modal" type="button">Close</button> <button class="btn btn-danger waves-effect waves-light deleteMatchRecord" type="button">Delete</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+			<form action="" class="users-update-record-model form-horizontal" method="post">
+				<div aria-labelledby="custom-width-modalLabel" class="modal fade show" id="update-modal" role="dialog" style="display: block;" tabindex="-1">
+					<div class="modal-dialog" style="width: 55%;">
+						<div class="modal-content" style="overflow: hidden;">
+							<div class="modal-header">
+								<h4 class="modal-title" id="custom-width-modalLabel">Update Record</h4><button aria-hidden="true" class="close update-data-from-delete-form" data-dismiss="modal" type="button">×</button>
+							</div>
+							<div class="modal-body" id="updateBody">
+								<div class="form-group">
+									<label class="col-md-12 col-form-label" for="first_name">First Name</label>
+									<div class="col-md-12">
+										<input autofocus="" class="form-control" id="first_name" name="first_name" required="" type="text" value="abdul">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-12 col-form-label" for="last_name">Last Name</label>
+									<div class="col-md-12">
+										<input autofocus="" class="form-control" id="last_name" name="last_name" required="" type="text" value="jaman">
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-default waves-effect update-data-from-delete-form" data-dismiss="modal" type="button">Close</button> <button class="btn btn-success waves-effect waves-light updateUserRecord" type="button">Update</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</main>
+	</div>
+</body>
+</html>
